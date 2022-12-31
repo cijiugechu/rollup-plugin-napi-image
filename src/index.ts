@@ -15,7 +15,7 @@ type LossyOptions = {
     type: 'lossy'
 }
 
-type SupportedExt = 'jpg' | 'jpeg' | 'png' | 'webp'
+type SupportedExt = 'jpg' | 'jpeg' | 'png' | 'webp' | 'avif'
 
 export type Options = LosslessOptions | LossyOptions
 
@@ -53,6 +53,10 @@ const napiMap = {
         'lossless': (buf: Buffer) => new Transformer(buf).webpLossless(),
         'lossy': (buf: Buffer, quality?: number) => new Transformer(buf).webp(quality)
     },
+    'avif': {
+        'lossless': (buf: Buffer) => new Transformer(buf).avif({ quality: 100 }),
+        'lossy': (buf: Buffer, quality?: number) => new Transformer(buf).avif({ quality })
+    }
 }
 
 
