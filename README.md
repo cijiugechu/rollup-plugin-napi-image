@@ -3,7 +3,7 @@ Rollup plugin for optimizing images using [@napi-rs/image](https://github.com/Br
 
 ## Usage
 
-#### 1. install
+### 1. install
 
 ```shell
 npm install rollup-plugin-napi-image --save-dev
@@ -11,7 +11,7 @@ npm install rollup-plugin-napi-image --save-dev
 pnpm add  rollup-plugin-napi-image -D
 ```
 
-#### 2. add plugin to your config file
+### 2. add plugin to your config file
 
 - if you are using `rollup`, import this plugin and add to `plugins` field like following:
 
@@ -35,7 +35,7 @@ export default defineConfig({
 - if you are using `vite` , just replace the first line of above with `import { defineConfig } from 'vite'`
 
 
-#### 3. options
+### 3. options
 
 | name | type  | default  | description |
 | :-   | :-    |  :-      | :-          |
