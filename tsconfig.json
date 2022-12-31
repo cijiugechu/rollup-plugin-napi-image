@@ -8,9 +8,8 @@
     "skipLibCheck": true,
     "noUnusedLocals": true,
     "noImplicitAny": true,
-    "allowJs": true,
+    "allowJs": false,
     "noEmit": true,
-    "outDir": "dist",
     "resolveJsonModule": true
   }
 }
