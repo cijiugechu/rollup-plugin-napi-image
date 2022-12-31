@@ -1,7 +1,10 @@
 {
-  "name": "ts-lib-starter",
+  "name": "rollup-plugin-napi-image-monorepo",
   "version": "0.0.0",
-  "author": "nemurubaka",
+  "author": {
+    "name": "nemurubaka",
+    "url": "https://github.com/cijiugechu"
+  },
   "private": true,
   "description": "",
   "keywords": [],
@@ -27,9 +30,7 @@
   "scripts": {
     "build": "pnpm build:core && pnpm build:playground",
     "build:core": "pnpm --filter rollup-plugin-napi-image run build",
-    "build:playground": "pnpm --filter playground run build",
-    "test": "vitest",
-    "test:watch": "vitest -w"
+    "build:playground": "pnpm --filter playground run build"
   },
   "license": "MIT",
   "devDependencies": {

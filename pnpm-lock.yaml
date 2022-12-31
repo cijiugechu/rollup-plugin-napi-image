@@ -28,6 +28,7 @@ importers:
     specifiers:
       '@napi-rs/image': ^1.4.2
       '@rollup/pluginutils': ^5.0.2
+      '@types/node': ^18.11.18
       rollup: ^3.9.0
       tsup: ^6.5.0
       typescript: ^4.9.4
@@ -36,6 +37,7 @@ importers:
       '@napi-rs/image': 1.4.2
       '@rollup/pluginutils': 5.0.2_rollup@3.9.0
     devDependencies:
+      '@types/node': 18.11.18
       rollup: 3.9.0
       tsup: 6.5.0_typescript@4.9.4
       typescript: 4.9.4
@@ -441,6 +443,10 @@ packages:
 
   /@types/node/18.11.12:
     resolution: {integrity: sha512-FgD3NtTAKvyMmD44T07zz2fEf+OKwutgBCEVM8GcvMGVGaDktiLNTDvPwC/LUe3PinMW+X6CuLOF2Ui1mAlSXg==}
+    dev: true
+
+  /@types/node/18.11.18:
+    resolution: {integrity: sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==}
     dev: true
 
   /acorn-walk/8.2.0:

@@ -1,6 +1,9 @@
 import { defineConfig } from 'vite'
-import { createPlugin } from 'rollup-plugin-napi-image'
+import { napiImage } from 'rollup-plugin-napi-image'
 
 export default defineConfig({
-  plugins: [createPlugin({})],
+  plugins: [napiImage({
+    type: 'lossy',
+    quality: 75
+  })],
 })

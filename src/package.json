@@ -1,45 +1,57 @@
 {
-    "name": "rollup-plugin-napi-image",
-    "version": "0.0.0",
-    "author": "nemurubaka",
-    "private": true,
-    "description": "",
-    "keywords": [],
-    "publishConfig": {
-      "access": "public"
-    },
-    "files": [
-      "dist"
-    ],
-    "main": "./dist/index.js",
-    "module": "./dist/index.mjs",
-    "exports": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
-    },
-    "types": "./dist/index.d.ts",
-    "homepage": "https://github.com/jufuku-haijo/ts-lib-starter",
-    "repository": {
-      "type": "git",
-      "url": "git@github.com:jufuku-haijo/ts-lib-starter.git"
-    },
-    "bugs": "https://github.com/jufuku-haijo/ts-lib-starter/issues",
-    "scripts": {
-      "build-fast": "tsup index.ts --format cjs,esm --dts",
-      "build": "pnpm run build-fast -- --dts-resolve",
-      "test": "vitest",
-      "test:watch": "vitest -w",
-      "prepublishOnly": "pnpm run build"
-    },
-    "license": "MIT",
-    "devDependencies": {
-      "rollup": "^3.9.0",
-      "tsup": "^6.5.0",
-      "typescript": "^4.9.4",
-      "vitest": "^0.25.6"
-    },
-    "dependencies": {
-      "@napi-rs/image": "^1.4.2",
-      "@rollup/pluginutils": "^5.0.2"
-    }
+  "name": "rollup-plugin-napi-image",
+  "version": "0.0.0",
+  "author": {
+    "name": "nemurubaka",
+    "url": "https://github.com/cijiugechu"
+  },
+  "private": false,
+  "description": "Rollup plugin for optimizing images using @napi-rs/image",
+  "keywords": [
+    "image",
+    "rollup-plugin",
+    "rollup",
+    "vite",
+    "vite-compatible",
+    "compression",
+    "lossless",
+    "jpg",
+    "jpeg"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "exports": {
+    "require": "./dist/index.js",
+    "import": "./dist/index.mjs"
+  },
+  "types": "./dist/index.d.ts",
+  "homepage": "https://github.com/jufuku-haijo/ts-lib-starter",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jufuku-haijo/ts-lib-starter.git"
+  },
+  "bugs": "https://github.com/jufuku-haijo/ts-lib-starter/issues",
+  "scripts": {
+    "build-fast": "tsup index.ts --format cjs,esm --dts",
+    "build": "pnpm run build-fast -- --dts-resolve",
+    "prepublishOnly": "pnpm run build"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "rollup": "^3.9.0",
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.4",
+    "vitest": "^0.25.6"
+  },
+  "dependencies": {
+    "@napi-rs/image": "^1.4.2",
+    "@rollup/pluginutils": "^5.0.2"
   }
+}

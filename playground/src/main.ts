@@ -1,6 +1,7 @@
 import './style.css'
 import typescriptLogo from './typescript.svg'
-import unoptimized from './un-optimized.webp'
+import unoptimized1 from './un-optimized.jpg'
+import unoptimized2 from './un-optimized.png'
 import { setupCounter } from './counter'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
@@ -18,7 +19,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <p class="read-the-docs">
       Click on the Vite and TypeScript logos to learn more
     </p>
-    <img src=${unoptimized} />
+    <img src=${unoptimized1} />
+    <img src=${unoptimized2} />
   </div>
 `
 

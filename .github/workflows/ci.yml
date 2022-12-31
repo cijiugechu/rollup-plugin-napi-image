@@ -34,7 +34,3 @@ jobs:
 
       - name: Build
         run: pnpm build
-
-      # Runs a set of commands using the runners shell
-      - name: Test
-        run: pnpm test

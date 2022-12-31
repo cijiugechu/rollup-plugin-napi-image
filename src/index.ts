@@ -3,20 +3,22 @@ import { createFilter } from '@rollup/pluginutils'
 import { Transformer, losslessCompressPng, pngQuantize } from '@napi-rs/image'
 
 type LosslessOptions = {
-    include?: string | RegExp | Array<string | RegExp>
+    include?: RegExp | string | Array<string | RegExp>
     exclude?: RegExp | string | Array<string | RegExp>
     type: 'lossless'
 }
 
 type LossyOptions = {
-    include?: string | RegExp | Array<string | RegExp>
+    include?: RegExp | string | Array<string | RegExp>
     exclude?: RegExp | string | Array<string | RegExp>
     quality?: number
     type: 'lossy'
 }
 
+type SupportedExt = 'jpg' | 'jpeg' | 'png' | 'webp'
 
 export type Options = LosslessOptions | LossyOptions
+
 
 const supportedExt = [
     'jpg',
@@ -25,6 +27,10 @@ const supportedExt = [
     'webp',
     'avif'
 ]
+
+const isSupportedExt = (filename: string) => {
+    return supportedExt.some(ext => filename.endsWith(ext))
+}
 
 const getExt = (filename: string) => {
     return filename.split('.').at(-1)
@@ -50,7 +56,7 @@ const napiMap = {
 }
 
 
-export const createPlugin = (options: Options) : Plugin => {
+export const napiImage = (options: Options): Plugin => {
     const {
         include,
         exclude,
@@ -65,18 +71,18 @@ export const createPlugin = (options: Options) : Plugin => {
 
     return {
         name: 'rollup-plugin-napi-image',
-        
-        async generateBundle(_ , bundles) {
-            for(const [filename, output] of Object.entries(bundles)) {
+
+        async generateBundle(_, bundles) {
+            for (const [filename, output] of Object.entries(bundles)) {
                 if (!filter(filename)) {
                     continue
                 }
 
-                if(output.type === 'chunk') {
+                if (output.type === 'chunk') {
                     continue
                 }
 
-                if(!supportedExt.includes(getExt(filename))) {
+                if (!isSupportedExt(filename)) {
                     continue
                 }
 
@@ -90,21 +96,31 @@ export const createPlugin = (options: Options) : Plugin => {
 
             try {
                 const filenames = Array.from(bucket.keys())
-    
+
                 await Promise.all(filenames.map(async (filename) => {
-                    const { source } = bucket.get(task)
-    
+                    const { source } = bucket.get(filename) ?? {}
+
                     const ext = getExt(filename)
-    
-                    const compressed = await napiMap[ext][type](source)
-    
-                    this.emitFile({ type: 'asset', source: compressed, filename })
+
+                    if (ext && source) {
+                        let compressed: Buffer
+
+                        if (type === 'lossy') {
+                            compressed = await napiMap[ext as SupportedExt][type](source, options?.quality)
+                        }
+
+                        compressed = await napiMap[ext as SupportedExt][type](source)
+
+                        this.emitFile({ type: 'asset', source: compressed, fileName: filename })
+                    }
+
+
                 }))
-            } catch (error) {
+            } catch (error: any) {
                 this.error(error)
             }
         }
 
-        
+
     }
 }
