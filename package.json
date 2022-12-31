@@ -21,12 +21,12 @@
     "import": "./dist/index.mjs"
   },
   "types": "./dist/index.d.ts",
-  "homepage": "https://github.com/jufuku-haijo/ts-lib-starter",
+  "homepage": "https://github.com/cijiugechu/rollup-plugin-napi-image",
   "repository": {
     "type": "git",
-    "url": "git@github.com:jufuku-haijo/ts-lib-starter.git"
+    "url": "git@github.com:cijiugechu/rollup-plugin-napi-image.git"
   },
-  "bugs": "https://github.com/jufuku-haijo/ts-lib-starter/issues",
+  "bugs": "https://github.com/cijiugechu/rollup-plugin-napi-image/issues",
   "scripts": {
     "build": "pnpm build:core && pnpm build:playground",
     "build:core": "pnpm --filter rollup-plugin-napi-image run build",
