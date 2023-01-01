@@ -1,5 +1,7 @@
 # rollup-plugin-napi-image
-Rollup plugin for optimizing images using [@napi-rs/image](https://github.com/Brooooooklyn/Image)
+Rollup plugin for optimizing images using [@napi-rs/image](https://github.com/Brooooooklyn/Image).
+
+see [example](../playground/)
 
 ## Usage
 
@@ -46,7 +48,6 @@ export default defineConfig({
 
 ### 4. supported formats
 
-current supported formats:
 1. `jpg/jpeg`
 2. `png`
 3. `webp` 
