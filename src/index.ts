@@ -1,6 +1,6 @@
 import type { Plugin } from 'rollup'
 import { createFilter } from '@rollup/pluginutils'
-import { Transformer, losslessCompressPng, pngQuantize } from '@napi-rs/image'
+import { Transformer, losslessCompressPng, pngQuantize, compressJpeg } from '@napi-rs/image'
 
 type LosslessOptions = {
     include?: RegExp | string | Array<string | RegExp>
@@ -38,12 +38,12 @@ const getExt = (filename: string) => {
 
 const napiMap = {
     'jpg': {
-        'lossless': (buf: Buffer) => new Transformer(buf).jpeg(),
-        'lossy': (buf: Buffer, quality?: number) => new Transformer(buf).jpeg(quality)
+        'lossless': (buf: Buffer) => compressJpeg(buf),
+        'lossy': (buf: Buffer, quality?: number) => compressJpeg(buf, { quality })
     },
     'jpeg': {
-        'lossless': (buf: Buffer) => new Transformer(buf).jpeg(),
-        'lossy': (buf: Buffer, quality?: number) => new Transformer(buf).jpeg(quality)
+        'lossless': (buf: Buffer) => compressJpeg(buf),
+        'lossy': (buf: Buffer, quality?: number) => compressJpeg(buf, { quality })
     },
     'png': {
         'lossless': (buf: Buffer) => losslessCompressPng(buf),
