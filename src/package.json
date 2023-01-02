@@ -6,7 +6,7 @@
     "url": "https://github.com/cijiugechu"
   },
   "private": false,
-  "description": "Rollup plugin for optimizing images using @napi-rs/image",
+  "description": "Rollup plugin for optimizing images powered by @napi-rs/image",
   "keywords": [
     "image",
     "rollup-plugin",

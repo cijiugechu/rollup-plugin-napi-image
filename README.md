@@ -1,5 +1,5 @@
 # rollup-plugin-napi-image
-Rollup plugin for optimizing images using [@napi-rs/image](https://github.com/Brooooooklyn/Image).
+Rollup plugin for optimizing images powered by [@napi-rs/image](https://github.com/Brooooooklyn/Image).
 
 see [example](./playground/)
 
