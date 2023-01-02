@@ -1,0 +1,10 @@
+node_modules
+playground/node_modules
+playground/dist
+src/node_modules
+src/dist
+
+pnpm-lock.yaml
+pnpm-workspace.yaml
+
+LICENSE

@@ -1,4 +1,5 @@
 # rollup-plugin-napi-image
+
 Rollup plugin for optimizing images powered by [@napi-rs/image](https://github.com/Brooooooklyn/Image).
 
 see [example](../playground/)
@@ -9,7 +10,7 @@ see [example](../playground/)
 
 ```shell
 npm install rollup-plugin-napi-image --save-dev
-# or you use pnpm 
+# or you use pnpm
 pnpm add  rollup-plugin-napi-image -D
 ```
 
@@ -23,34 +24,32 @@ import { napiImage } from 'rollup-plugin-napi-image'
 // ... other lines
 
 export default defineConfig({
-    plugins: [
-        /* other plugins */
-        napiImage({
-            type: 'lossy',
-            quality: 75
-        })
-    ]
+  plugins: [
+    /* other plugins */
+    napiImage({
+      type: 'lossy',
+      quality: 75,
+    }),
+  ],
 })
-
 ```
 
 - if you are using `vite` , just replace the first line of above with `import { defineConfig } from 'vite'`
 
-
 ### 3. options
 
-| name | type  | default  | description |
-| :-   | :-    |  :-      | :-          |
-|`include` | `RegExp \| string \| Array<string \| RegExp>`  | null | A picomatch pattern, or array of patterns, which specifies the files in the build the plugin should operate on. By default all supported images are targeted. |
-| `exclude` | `RegExp \| string \| Array<string \| RegExp>` | null | A picomatch pattern, or array of patterns, which specifies the files in the build the plugin should ignore. By default no images are ignored. |
-| `type` | `'lossy' \| 'lossless'` | | The optimization type applied to images, when `type` is `lossy` , you can specify `quality` for the process. |
-| `quality` | `number` | 75 | Only works when `type` is `lossy`. |
+| name      | type                                          | default | description                                                                                                                                                   |
+| :-------- | :-------------------------------------------- | :------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `include` | `RegExp \| string \| Array<string \| RegExp>` | null    | A picomatch pattern, or array of patterns, which specifies the files in the build the plugin should operate on. By default all supported images are targeted. |
+| `exclude` | `RegExp \| string \| Array<string \| RegExp>` | null    | A picomatch pattern, or array of patterns, which specifies the files in the build the plugin should ignore. By default no images are ignored.                 |
+| `type`    | `'lossy' \| 'lossless'`                       |         | The optimization type applied to images, when `type` is `lossy` , you can specify `quality` for the process.                                                  |
+| `quality` | `number`                                      | 75      | Only works when `type` is `lossy`.                                                                                                                            |
 
 ### 4. supported formats
 
 1. `jpg/jpeg`
 2. `png`
-3. `webp` 
+3. `webp`
 4. `avif`
 
 ## License
