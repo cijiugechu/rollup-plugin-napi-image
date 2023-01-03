@@ -111,9 +111,9 @@ export const napiImage = (options: Options): Plugin => {
                   source,
                   options?.quality
                 )
+              } else {
+                compressed = await napiMap[ext as SupportedExt][type](source)
               }
-
-              compressed = await napiMap[ext as SupportedExt][type](source)
 
               this.emitFile({
                 type: 'asset',
