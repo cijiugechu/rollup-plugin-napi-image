@@ -6,11 +6,21 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "ava"
+  },
+  "ava": {
+    "files": [
+      "__test__/**/*"
+    ],
+    "extensions": [
+      "mjs"
+    ]
   },
   "devDependencies": {
+    "ava": "^5.1.0",
+    "rollup-plugin-napi-image": "workspace:*",
     "typescript": "^4.9.3",
-    "vite": "^4.0.0",
-    "rollup-plugin-napi-image": "workspace:*"
+    "vite": "^4.0.0"
   }
 }
