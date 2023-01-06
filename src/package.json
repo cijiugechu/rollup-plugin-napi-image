@@ -31,7 +31,7 @@
     "import": "./dist/index.mjs"
   },
   "types": "./dist/index.d.ts",
-  "homepage": "https://github.com/cijiugechu/rollup-plugin-napi-image",
+  "homepage": "https://github.com/cijiugechu/rollup-plugin-napi-image#readme",
   "repository": {
     "type": "git",
     "url": "git@github.com:cijiugechu/rollup-plugin-napi-image.git"
