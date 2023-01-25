@@ -4,12 +4,10 @@ importers:
 
   .:
     specifiers:
-      '@egoist/prettier-config': ^1.0.0
       prettier: ^2.8.1
       typescript: ^4.9.4
       vitest: ^0.25.6
     devDependencies:
-      '@egoist/prettier-config': 1.0.0
       prettier: 2.8.1
       typescript: 4.9.4
       vitest: 0.25.6
@@ -46,10 +44,6 @@ importers:
       vitest: 0.25.8
 
 packages:
-
-  /@egoist/prettier-config/1.0.0:
-    resolution: {integrity: sha512-D1Tp9Jv4aVoEo3cOAO966gFCI0wx/1lZ6sEHX8uMAfyVxuxD2+knGxhfGlb/FNLxWV3ifSI5hOmB/zFfsi7Rzw==}
-    dev: true
 
   /@esbuild/android-arm/0.15.18:
     resolution: {integrity: sha512-5GT+kcs2WVGjVs7+boataCkO5Fg0y4kCjzkB5bAip7H4jfnOS3dA6KPiww9W1OEKTKeAcUVhdZGvgI65OXmUnw==}
