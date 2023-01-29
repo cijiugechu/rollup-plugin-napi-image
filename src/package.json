@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-napi-image",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "author": {
     "name": "nemurubaka",
     "url": "https://github.com/cijiugechu"
@@ -51,7 +51,7 @@
     "vitest": "^0.25.8"
   },
   "dependencies": {
-    "@napi-rs/image": "^1.4.4",
+    "@napi-rs/image": "^1.5.1",
     "@rollup/pluginutils": "^5.0.2"
   }
 }
