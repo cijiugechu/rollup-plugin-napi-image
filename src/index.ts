@@ -115,6 +115,9 @@ export const napiImage = (options: Options): Plugin => {
                 compressed = await napiMap[ext as SupportedExt][type](source)
               }
 
+              // only emit once
+              delete bundles[filename]
+
               this.emitFile({
                 type: 'asset',
                 source: compressed,
