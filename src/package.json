@@ -50,7 +50,7 @@
     "typescript": "^4.9.4"
   },
   "dependencies": {
-    "@napi-rs/image": "^1.5.1",
+    "@napi-rs/image": "^1.6.0",
     "@rollup/pluginutils": "^5.0.2"
   }
 }
