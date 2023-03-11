@@ -30,8 +30,6 @@ type LossyOptions = {
   type: 'lossy'
 }
 
-
-
 export type Options = LosslessOptions | LossyOptions
 
 const supportedExt = ['jpg', 'jpeg', 'png', 'webp', 'avif']

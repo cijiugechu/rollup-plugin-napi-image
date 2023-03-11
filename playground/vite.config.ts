@@ -6,7 +6,7 @@ export default defineConfig({
     napiImage({
       type: 'lossy',
       quality: 75,
-      toModernExt: () => 'webp'
+      toModernExt: () => 'webp',
     }),
   ],
 })
