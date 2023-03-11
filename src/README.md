@@ -44,7 +44,7 @@ export default defineConfig({
 | `exclude`     | `RegExp \| string \| Array<string \| RegExp>` | null    | A picomatch pattern, or array of patterns, which specifies the files in the build the plugin should ignore. By default no images are ignored.                 |
 | `type`        | `'lossy' \| 'lossless'`                       |         | The optimization type applied to images, when `type` is `lossy` , you can specify `quality` for the process.                                                  |
 | `quality`     | `number`                                      | 75      | Only works when `type` is `lossy`.                                                                                                                            |
-| `toModernExt` | `(ext: SupportedExt) => 'avif'                | 'webp'` | `ext => ext`                                                                                                                                                  | A conversion function that converts the specified image format to a modern image format. |
+| `toModernExt` | `(ext: SupportedExt) => 'avif'\|'webp'` | `ext => ext`                                                                                                                                                  | A conversion function that converts the specified image format to a modern image format. |
 
 ### 4. supported formats
 
