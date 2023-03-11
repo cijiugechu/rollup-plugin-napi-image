@@ -7,20 +7,30 @@ import {
   compressJpeg,
 } from '@napi-rs/image'
 
+type Pattern = RegExp | string | Array<string | RegExp>
+
+type SupportedExt = 'jpg' | 'jpeg' | 'png' | 'webp' | 'avif'
+
+type ModernExt = 'webp' | 'avif'
+
+type ToModernExt = (ext: SupportedExt) => ModernExt
+
 type LosslessOptions = {
-  include?: RegExp | string | Array<string | RegExp>
-  exclude?: RegExp | string | Array<string | RegExp>
+  include?: Pattern
+  exclude?: Pattern
+  toModernExt?: ToModernExt
   type: 'lossless'
 }
 
 type LossyOptions = {
-  include?: RegExp | string | Array<string | RegExp>
-  exclude?: RegExp | string | Array<string | RegExp>
+  include?: Pattern
+  exclude?: Pattern
+  toModernExt?: ToModernExt
   quality?: number
   type: 'lossy'
 }
 
-type SupportedExt = 'jpg' | 'jpeg' | 'png' | 'webp' | 'avif'
+
 
 export type Options = LosslessOptions | LossyOptions
 
@@ -32,6 +42,15 @@ const isSupportedExt = (filename: string) => {
 
 const getExt = (filename: string) => {
   return filename.split('.').at(-1)
+}
+
+//@ts-ignore
+const transparent: ToModernExt = ext => ext
+
+const replaceExt = (filename: string, ext: SupportedExt) => {
+  const splitted = filename.split('.')
+
+  return [...splitted.slice(0, -1), ext].join('.')
 }
 
 const napiMap = {
@@ -61,7 +80,7 @@ const napiMap = {
 }
 
 export const napiImage = (options: Options): Plugin => {
-  const { include, exclude, type } = options
+  const { include, exclude, type, toModernExt = transparent } = options
 
   const filter = createFilter(include, exclude)
 
@@ -105,14 +124,15 @@ export const napiImage = (options: Options): Plugin => {
 
             if (ext && source) {
               let compressed: Buffer
+              const outExt = toModernExt(ext as SupportedExt)
 
               if (type === 'lossy') {
-                compressed = await napiMap[ext as SupportedExt][type](
+                compressed = await napiMap[outExt][type](
                   source,
                   options?.quality
                 )
               } else {
-                compressed = await napiMap[ext as SupportedExt][type](source)
+                compressed = await napiMap[outExt][type](source)
               }
 
               // only emit once
@@ -121,7 +141,7 @@ export const napiImage = (options: Options): Plugin => {
               this.emitFile({
                 type: 'asset',
                 source: compressed,
-                fileName: filename,
+                fileName: replaceExt(filename, outExt),
               })
             }
           })
