@@ -20,7 +20,7 @@
   "devDependencies": {
     "ava": "^5.1.0",
     "rollup-plugin-napi-image": "workspace:*",
-    "typescript": "^4.9.3",
+    "typescript": "^5.0.0",
     "vite": "^4.0.0"
   }
 }
