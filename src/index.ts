@@ -145,5 +145,9 @@ export const napiImage = (options: Options): Plugin => {
         this.error(error)
       }
     },
+
+    closeBundle() {
+      bucket.clear()
+    }
   }
 }
