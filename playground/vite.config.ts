@@ -4,7 +4,7 @@ import { napiImage } from 'rollup-plugin-napi-image'
 export default defineConfig({
   plugins: [
     napiImage({
-      type: 'lossy',
+      mode: 'lossy',
       quality: 75,
     }),
   ],

@@ -27,7 +27,7 @@ export default defineConfig({
   plugins: [
     /* other plugins */
     napiImage({
-      type: 'lossy',
+      mode: 'lossy',
       quality: 75,
     }),
   ],
@@ -42,8 +42,8 @@ export default defineConfig({
 | :-------- | :-------------------------------------------- | :------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `include` | `RegExp \| string \| Array<string \| RegExp>` | null    | A picomatch pattern, or array of patterns, which specifies the files in the build the plugin should operate on. By default all supported images are targeted. |
 | `exclude` | `RegExp \| string \| Array<string \| RegExp>` | null    | A picomatch pattern, or array of patterns, which specifies the files in the build the plugin should ignore. By default no images are ignored.                 |
-| `type`    | `'lossy' \| 'lossless'`                       |         | The optimization type applied to images, when `type` is `lossy` , you can specify `quality` for the process.                                                  |
-| `quality` | `number`                                      | 75      | Only works when `type` is `lossy`.                                                                                                                            |
+| `mode`    | `'lossy' \| 'lossless'`                       |         | The optimization mode applied to images, when `mode` is `lossy` , you can specify `quality` for the process.                                                  |
+| `quality` | `number`                                      | 75      | Only works when `mode` is `lossy`.                                                                                                                            |
 | `toModernExt` | `(ext: SupportedExt) => ModernExt` | `ext => ext` | A conversion function that converts the specified image format to a modern image format. |
 
 ### 4. supported formats

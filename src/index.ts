@@ -19,7 +19,7 @@ type LosslessOptions = {
   include?: Pattern
   exclude?: Pattern
   toModernExt?: ToModernExt
-  type: 'lossless'
+  mode: 'lossless'
 }
 
 type LossyOptions = {
@@ -27,7 +27,7 @@ type LossyOptions = {
   exclude?: Pattern
   toModernExt?: ToModernExt
   quality?: number
-  type: 'lossy'
+  mode: 'lossy'
 }
 
 export type Options = LosslessOptions | LossyOptions
@@ -78,7 +78,7 @@ const napiMap = {
 }
 
 export const napiImage = (options: Options): Plugin => {
-  const { include, exclude, type, toModernExt = transparent } = options
+  const { include, exclude, mode, toModernExt = transparent } = options
 
   const filter = createFilter(include, exclude)
 
@@ -124,13 +124,13 @@ export const napiImage = (options: Options): Plugin => {
               let compressed: Buffer
               const outExt = toModernExt(ext as SupportedExt)
 
-              if (type === 'lossy') {
-                compressed = await napiMap[outExt][type](
+              if (mode === 'lossy') {
+                compressed = await napiMap[outExt][mode](
                   source,
                   options?.quality
                 )
               } else {
-                compressed = await napiMap[outExt][type](source)
+                compressed = await napiMap[outExt][mode](source)
               }
 
               // only emit once

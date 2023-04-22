@@ -20,7 +20,7 @@ test('should be able to lossless optimize png image', async t => {
     },
     plugins: [
       napiImage({
-        type: 'lossless',
+        mode: 'lossless',
       }),
     ],
   })
@@ -44,7 +44,7 @@ test('should be able to lossless optimize jpg image', async t => {
     },
     plugins: [
       napiImage({
-        type: 'lossless',
+        mode: 'lossless',
       }),
     ],
   })
@@ -68,7 +68,7 @@ test('should be able to lossy optimize png image', async t => {
     },
     plugins: [
       napiImage({
-        type: 'lossy',
+        mode: 'lossy',
         quality: 75,
       }),
     ],
@@ -93,7 +93,7 @@ test('should be able to lossy optimize jpg image', async t => {
     },
     plugins: [
       napiImage({
-        type: 'lossy',
+        mode: 'lossy',
         quality: 75,
       }),
     ],
