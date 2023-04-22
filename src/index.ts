@@ -6,6 +6,7 @@ import {
   pngQuantize,
   compressJpeg,
 } from '@napi-rs/image'
+import { extname } from 'path'
 
 type Pattern = RegExp | string | Array<string | RegExp>
 
@@ -36,10 +37,6 @@ const supportedExt = ['jpg', 'jpeg', 'png', 'webp', 'avif']
 
 const isSupportedExt = (filename: string) => {
   return supportedExt.some(ext => filename.endsWith(ext))
-}
-
-const getExt = (filename: string) => {
-  return filename.split('.').at(-1)
 }
 
 //@ts-ignore
@@ -118,7 +115,7 @@ export const napiImage = (options: Options): Plugin => {
           filenames.map(async filename => {
             const { source } = bucket.get(filename) ?? {}
 
-            const ext = getExt(filename)
+            const ext = extname(filename).replace('.', '')
 
             if (ext && source) {
               let compressed: Buffer
