@@ -38,8 +38,8 @@
   },
   "bugs": "https://github.com/cijiugechu/rollup-plugin-napi-image/issues",
   "scripts": {
-    "build-fast": "tsup index.ts --format cjs,esm --dts",
-    "build": "pnpm run build-fast -- --dts-resolve",
+    "build:debug": "tsup --config tsup.debug.ts",
+    "build": "tsup --config tsup.config.ts",
     "prepublishOnly": "pnpm run build"
   },
   "license": "MIT",

@@ -2,6 +2,8 @@ import './style.css'
 import typescriptLogo from './typescript.svg'
 import unoptimized1 from './un-optimized.jpg'
 import unoptimized2 from './un-optimized.png'
+import optimized1 from './optimized.jpg'
+import optimized2 from './optimized.png'
 import { setupCounter } from './counter'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
@@ -21,6 +23,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </p>
     <img src=${unoptimized1} />
     <img src=${unoptimized2} />
+    <img src=${optimized1} />
+    <img src=${optimized2} />
   </div>
 `
 

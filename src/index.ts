@@ -130,14 +130,17 @@ export const napiImage = (options: Options): Plugin => {
                 compressed = await napiMap[outExt][mode](source)
               }
 
-              // only emit once
-              delete bundles[filename]
+              // ensure that compressed size is smaller than original size
+              if (compressed.length < source.length) {
+                // only emit once
+                delete bundles[filename]
 
-              this.emitFile({
-                type: 'asset',
-                source: compressed,
-                fileName: replaceExt(filename, outExt),
-              })
+                this.emitFile({
+                  type: 'asset',
+                  source: compressed,
+                  fileName: replaceExt(filename, outExt),
+                })
+              }
             }
           })
         )
@@ -148,6 +151,6 @@ export const napiImage = (options: Options): Plugin => {
 
     closeBundle() {
       bucket.clear()
-    }
+    },
   }
 }
