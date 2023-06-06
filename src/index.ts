@@ -1,4 +1,5 @@
 import type { Plugin } from 'rollup'
+import type { FilterPattern } from '@rollup/pluginutils'
 import { createFilter } from '@rollup/pluginutils'
 import {
   Transformer,
@@ -8,8 +9,6 @@ import {
 } from '@napi-rs/image'
 import { extname } from 'path'
 
-type Pattern = RegExp | string | Array<string | RegExp>
-
 type SupportedExt = 'jpg' | 'jpeg' | 'png' | 'webp' | 'avif'
 
 type ModernExt = 'webp' | 'avif'
@@ -17,15 +16,15 @@ type ModernExt = 'webp' | 'avif'
 type ToModernExt = (ext: SupportedExt) => ModernExt
 
 type LosslessOptions = {
-  include?: Pattern
-  exclude?: Pattern
+  include?: FilterPattern
+  exclude?: FilterPattern
   toModernExt?: ToModernExt
   mode: 'lossless'
 }
 
 type LossyOptions = {
-  include?: Pattern
-  exclude?: Pattern
+  include?: FilterPattern
+  exclude?: FilterPattern
   toModernExt?: ToModernExt
   quality?: number
   mode: 'lossy'
