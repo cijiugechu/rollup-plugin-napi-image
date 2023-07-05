@@ -4,10 +4,10 @@ importers:
 
   .:
     specifiers:
-      prettier: ^2.8.1
+      prettier: ^3.0.0
       typescript: ^5.0.0
     devDependencies:
-      prettier: 2.8.1
+      prettier: 3.0.0
       typescript: 5.0.2
 
   playground:
@@ -1631,9 +1631,9 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
-  /prettier/2.8.1:
-    resolution: {integrity: sha512-lqGoSJBQNJidqCHE80vqZJHWHRFoNYsSpP9AjFhlhi9ODCJA541svILes/+/1GM3VaL/abZi7cpFzOpdR9UPKg==}
-    engines: {node: '>=10.13.0'}
+  /prettier/3.0.0:
+    resolution: {integrity: sha512-zBf5eHpwHOGPC47h0zrPyNn+eAEIdEzfywMoYn2XPi0P44Zp0tSq64rq0xAREh4auw2cJZHo9QUob+NqCQky4g==}
+    engines: {node: '>=14'}
     hasBin: true
     dev: true
 
