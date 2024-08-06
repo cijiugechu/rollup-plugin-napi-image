@@ -31,7 +31,7 @@ importers:
       tsup: ^6.7.0
       typescript: ^5.0.0
     dependencies:
-      '@napi-rs/image': 1.6.1
+      '@napi-rs/image': 1.7.0
       '@rollup/pluginutils': 5.0.2_rollup@3.9.1
     devDependencies:
       '@types/node': 18.11.18
@@ -437,8 +437,8 @@ packages:
     dev: true
     optional: true
 
-  /@napi-rs/image-android-arm-eabi/1.6.1:
-    resolution: {integrity: sha512-06GgTsnTzd+LQbj1EVciU4kOP7dUL40y3+vZkMe5yYNNdL8F199tnDxGodL8UYjHKrz+shKdZxjzq3ppE12dNg==}
+  /@napi-rs/image-android-arm-eabi/1.7.0:
+    resolution: {integrity: sha512-lpyqxaIYUrdk096xoJjvPGin5jY1Ehor0RxryqDvowGUhVU3TDgolsjjuFPEki3cfvV6zzAm7bWUkmxIci2zaw==}
     engines: {node: '>= 10'}
     cpu: [arm]
     os: [android]
@@ -446,8 +446,8 @@ packages:
     dev: false
     optional: true
 
-  /@napi-rs/image-android-arm64/1.6.1:
-    resolution: {integrity: sha512-RjjupJNodv1beIHEIk6CPwzzQHexy9G1KT/xce3PDV+r2RwOaZ5uisAoZeUQMpJ7U9yM8qEqBYJ0ZJRxOL3IyA==}
+  /@napi-rs/image-android-arm64/1.7.0:
+    resolution: {integrity: sha512-ojzi1ORsFZ53upLh0YVF1J8Qxvq+V2s6Xwbi4p4+ZLgk3MMd9ephERxxNExOf3/nyj4k+izEz6C/RbJwnSJXpw==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [android]
@@ -455,8 +455,8 @@ packages:
     dev: false
     optional: true
 
-  /@napi-rs/image-darwin-arm64/1.6.1:
-    resolution: {integrity: sha512-7SDYifSZPDa1TnDAxh641Qp8bB6XwLRMzboqlib9VVfW4B+xG8USTFX+pyc7AGA6Qt9YDx0fCTstGTdQZ4x0Vg==}
+  /@napi-rs/image-darwin-arm64/1.7.0:
+    resolution: {integrity: sha512-SadObhsP0E/og6FGDzwafWFEwePSkdEKmwh7ssWePopwN2PfTnIyQq4MfVE/iSLgHfiHgQwwwssY6j815P8YwA==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [darwin]
@@ -464,8 +464,8 @@ packages:
     dev: false
     optional: true
 
-  /@napi-rs/image-darwin-x64/1.6.1:
-    resolution: {integrity: sha512-JESPPgW1IVKyMk/jzLmbbE/WcJ9GliUljWNpTaZftTISPibQ0kXLFWITTpvKKGXOi1wqHw2HNo+xPwaBViRYPQ==}
+  /@napi-rs/image-darwin-x64/1.7.0:
+    resolution: {integrity: sha512-lbUpy3deqxsbGMZRRwkSAMs4uWN+f8RER4BI7kwVK9rjUwvmnI+JMC+TCD03j+AMviANhsR/umDjSTS4HAbKdQ==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [darwin]
@@ -473,8 +473,8 @@ packages:
     dev: false
     optional: true
 
-  /@napi-rs/image-freebsd-x64/1.6.1:
-    resolution: {integrity: sha512-uHe50MR6fHROzrOVv2lKowo0fnm51rZFQUgjBrb4U7sRof5MH6yXkiikd0zEVbqbK16JybCJhx8JMxg1fStOSw==}
+  /@napi-rs/image-freebsd-x64/1.7.0:
+    resolution: {integrity: sha512-DCFov4Ibk7pNUI30dBAR2SqtBSKTEtlsqkOJGWRiqGlTSqt7xPR3YcdM3N8JYN1lFHCN2SoJnInV3/p3yiKVLQ==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [freebsd]
@@ -482,8 +482,8 @@ packages:
     dev: false
     optional: true
 
-  /@napi-rs/image-linux-arm-gnueabihf/1.6.1:
-    resolution: {integrity: sha512-MioNufx/KaMg4ksisp2/5fwnKj+Le0jF9DKgdckVKd/OnHASTATYQN4akXXejMgcDdKyiInGtmcHK1N4Z29HKQ==}
+  /@napi-rs/image-linux-arm-gnueabihf/1.7.0:
+    resolution: {integrity: sha512-392foWTx3vIsBs5lNDZt0H0qn/x3PLR92GCbY1SWNtbE11+D47IDxHauLqcU/18IVule9nODFZ6KLLhuLjdqJA==}
     engines: {node: '>= 10'}
     cpu: [arm]
     os: [linux]
@@ -491,8 +491,8 @@ packages:
     dev: false
     optional: true
 
-  /@napi-rs/image-linux-arm64-gnu/1.6.1:
-    resolution: {integrity: sha512-TIq7dgKs15r1JdBxJYKf6YVAydtsoOEdBvfWITd8zIN1VAM3J0B5/efCDf9TWOSeh5j6Do2HrgzUWa0SF8wakA==}
+  /@napi-rs/image-linux-arm64-gnu/1.7.0:
+    resolution: {integrity: sha512-oYTCK6VsyywMPjcOJh5hk8vTA7i2coekXnkfHErBbyKm7v5F+3pdOXrhmKQHYojENHT/LkWWKlkr0jF8QB4U3w==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
@@ -500,8 +500,8 @@ packages:
     dev: false
     optional: true
 
-  /@napi-rs/image-linux-arm64-musl/1.6.1:
-    resolution: {integrity: sha512-vSF6bNrWbKADS4lnapX7dwYwLCduG2HMhDzLx/q8a7eDVDfqXCvAhRTcvOeNkQRQ7vmzyYpu3qsjI36IK7Y60w==}
+  /@napi-rs/image-linux-arm64-musl/1.7.0:
+    resolution: {integrity: sha512-x3Z3YmhdMut2ULdXSjxAihp3rGcTvxUG5bhHMVc7bfezhGOViqfPJ5Qknra8egEZpXe6C0PKkBcIBm7hSlaubg==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
@@ -509,8 +509,8 @@ packages:
     dev: false
     optional: true
 
-  /@napi-rs/image-linux-x64-gnu/1.6.1:
-    resolution: {integrity: sha512-a0ChzvNRF4uwSGCnBuLDFTGrBHlaltEeRsd1kU4c7+d27qs7LFi89oDrVXItM/t+OVD4svPx4zyUQXtHHuVU7w==}
+  /@napi-rs/image-linux-x64-gnu/1.7.0:
+    resolution: {integrity: sha512-5+FEzLr7yNGljdXXPyMJLJAQG8z9c1rawFTnT4dUidFjtpP/C4AP923eWDeo7B2Zz2psT7A8hgXhK+uAqyj4WQ==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
@@ -518,8 +518,8 @@ packages:
     dev: false
     optional: true
 
-  /@napi-rs/image-linux-x64-musl/1.6.1:
-    resolution: {integrity: sha512-4mZ0pGP3tFidnKqVhbon48jX0+BddAE2ZiEtfXNypOx25pizVec1sSgHACKgFV9Yn0bVEGZozjxYeoERCUkdyA==}
+  /@napi-rs/image-linux-x64-musl/1.7.0:
+    resolution: {integrity: sha512-LhzaYQ/z3axPUDPZefdyvgHz1qQ3NF2oDUHHFkVgpWNLJ3wGxa4GpM5TD+/jJCOChACAGYcZPpx96XLJGKNZfQ==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
@@ -527,8 +527,8 @@ packages:
     dev: false
     optional: true
 
-  /@napi-rs/image-win32-ia32-msvc/1.6.1:
-    resolution: {integrity: sha512-0XNbGAv17xYfo2mrS8jSVpJN8nJrdqimr/1aUojPO9HdYIdKYBNWz1o5qulolaPJqa+T72yEevnuhkgmLxJLsA==}
+  /@napi-rs/image-win32-ia32-msvc/1.7.0:
+    resolution: {integrity: sha512-taCxMQTssuZW2hviOzJxo1iji0cAwjXY9m7CkiAAM8KftVUxAbmDGkPyEGRyt43ftYJ/rXRMz1vEEz/gxiZ5rQ==}
     engines: {node: '>= 10'}
     cpu: [ia32]
     os: [win32]
@@ -536,8 +536,8 @@ packages:
     dev: false
     optional: true
 
-  /@napi-rs/image-win32-x64-msvc/1.6.1:
-    resolution: {integrity: sha512-hvQT+YID51JSxr9HbxmhKa8Y4jZh+4nxJZ33H0NhT/xFd6bGa4+EcIjMNqixKU8PmO9BYjEVH8FWHev6AEvp4A==}
+  /@napi-rs/image-win32-x64-msvc/1.7.0:
+    resolution: {integrity: sha512-hfnpTipEv6mrvhaNHRHBdYoVPUPyWnJ5KDpPAabJbTcsVb4x2TUiVI54r5GzF8zQ0RJc5mGtWdu9KFvyEBVJkg==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
@@ -545,22 +545,22 @@ packages:
     dev: false
     optional: true
 
-  /@napi-rs/image/1.6.1:
-    resolution: {integrity: sha512-idrYU7POm9T7dcZVkWN8kpFYNIj0XaT20LtTzwWGZsR5Dhsce0hxwVGnKg2Kq/Z/AhHkR6MDagkOX5qTl5LjoQ==}
+  /@napi-rs/image/1.7.0:
+    resolution: {integrity: sha512-UI8bJKz4MwYsf2toiyxodbXeyHNe9yxhXz0KJdiDgliYs7ObCiu7DatPA899yuNscOApkweKV6yx2ag1lpVbbw==}
     engines: {node: '>= 10'}
     optionalDependencies:
-      '@napi-rs/image-android-arm-eabi': 1.6.1
-      '@napi-rs/image-android-arm64': 1.6.1
-      '@napi-rs/image-darwin-arm64': 1.6.1
-      '@napi-rs/image-darwin-x64': 1.6.1
-      '@napi-rs/image-freebsd-x64': 1.6.1
-      '@napi-rs/image-linux-arm-gnueabihf': 1.6.1
-      '@napi-rs/image-linux-arm64-gnu': 1.6.1
-      '@napi-rs/image-linux-arm64-musl': 1.6.1
-      '@napi-rs/image-linux-x64-gnu': 1.6.1
-      '@napi-rs/image-linux-x64-musl': 1.6.1
-      '@napi-rs/image-win32-ia32-msvc': 1.6.1
-      '@napi-rs/image-win32-x64-msvc': 1.6.1
+      '@napi-rs/image-android-arm-eabi': 1.7.0
+      '@napi-rs/image-android-arm64': 1.7.0
+      '@napi-rs/image-darwin-arm64': 1.7.0
+      '@napi-rs/image-darwin-x64': 1.7.0
+      '@napi-rs/image-freebsd-x64': 1.7.0
+      '@napi-rs/image-linux-arm-gnueabihf': 1.7.0
+      '@napi-rs/image-linux-arm64-gnu': 1.7.0
+      '@napi-rs/image-linux-arm64-musl': 1.7.0
+      '@napi-rs/image-linux-x64-gnu': 1.7.0
+      '@napi-rs/image-linux-x64-musl': 1.7.0
+      '@napi-rs/image-win32-ia32-msvc': 1.7.0
+      '@napi-rs/image-win32-x64-msvc': 1.7.0
     dev: false
 
   /@nodelib/fs.scandir/2.1.5:
@@ -816,7 +816,7 @@ packages:
       normalize-path: 3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /chunkd/2.0.1:
@@ -1137,8 +1137,8 @@ packages:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
     dev: true
 
-  /fsevents/2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+  /fsevents/2.3.3:
+    resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true
@@ -1703,7 +1703,7 @@ packages:
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /rollup/3.9.1:
@@ -1711,7 +1711,7 @@ packages:
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
 
   /run-parallel/1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
@@ -1978,7 +1978,7 @@ packages:
       resolve: 1.22.1
       rollup: 3.9.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /webidl-conversions/4.0.2:
