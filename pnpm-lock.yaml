@@ -32,10 +32,10 @@ importers:
       typescript: ^5.0.0
     dependencies:
       '@napi-rs/image': 1.6.1
-      '@rollup/pluginutils': 5.0.2_rollup@3.9.1
+      '@rollup/pluginutils': 5.0.2_rollup@3.29.5
     devDependencies:
       '@types/node': 18.11.18
-      rollup: 3.9.1
+      rollup: 3.29.5
       tsup: 6.7.0_typescript@5.0.2
       typescript: 5.0.2
 
@@ -584,7 +584,7 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@rollup/pluginutils/5.0.2_rollup@3.9.1:
+  /@rollup/pluginutils/5.0.2_rollup@3.29.5:
     resolution: {integrity: sha512-pTd9rIsP92h+B6wWwFbW8RkZv4hiR/xKsqre4SIuAOaOEQRxi0lqLke9k2/7WegC85GgUs9pjmOjCUi3In4vwA==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -596,7 +596,7 @@ packages:
       '@types/estree': 1.0.0
       estree-walker: 2.0.2
       picomatch: 2.3.1
-      rollup: 3.9.1
+      rollup: 3.29.5
     dev: false
 
   /@types/estree/1.0.0:
@@ -816,7 +816,7 @@ packages:
       normalize-path: 3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /chunkd/2.0.1:
@@ -1137,8 +1137,8 @@ packages:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
     dev: true
 
-  /fsevents/2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+  /fsevents/2.3.3:
+    resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true
@@ -1698,20 +1698,20 @@ packages:
       glob: 7.1.6
     dev: true
 
+  /rollup/3.29.5:
+    resolution: {integrity: sha512-GVsDdsbJzzy4S/v3dqWPJ7EfvZJfCHiDqe80IyrF59LYuP+e6U1LJoUqeuqRbwAWoMNoXivMNeNAOf5E22VA1w==}
+    engines: {node: '>=14.18.0', npm: '>=8.0.0'}
+    hasBin: true
+    optionalDependencies:
+      fsevents: 2.3.3
+
   /rollup/3.9.0:
     resolution: {integrity: sha512-nGGylpmblyjTpF4lEUPgmOw6OVxRvnI6Iuuh6Lz4O/X66cVOX1XJSsqP1YamxQ+mPuFE7qJxLFDSCk8rNv5dDw==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
-
-  /rollup/3.9.1:
-    resolution: {integrity: sha512-GswCYHXftN8ZKGVgQhTFUJB/NBXxrRGgO2NCy6E8s1rwEJ4Q9/VttNqcYfEvx4dTo4j58YqdC3OVztPzlKSX8w==}
-    engines: {node: '>=14.18.0', npm: '>=8.0.0'}
-    hasBin: true
-    optionalDependencies:
-      fsevents: 2.3.2
 
   /run-parallel/1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
@@ -1927,7 +1927,7 @@ packages:
       joycon: 3.1.1
       postcss-load-config: 3.1.4
       resolve-from: 5.0.0
-      rollup: 3.9.1
+      rollup: 3.29.5
       source-map: 0.8.0-beta.0
       sucrase: 3.29.0
       tree-kill: 1.2.2
@@ -1978,7 +1978,7 @@ packages:
       resolve: 1.22.1
       rollup: 3.9.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /webidl-conversions/4.0.2:
